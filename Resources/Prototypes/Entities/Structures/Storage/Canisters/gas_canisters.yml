@@ -126,6 +126,8 @@
     - type: FootstepModifier # mono
       footstepSoundCollection:
         collection: FootstepHull
+    - type: Paintable # Upstream#37341
+      group: Canisters # Upstream#37341
 
 - type: entity
   parent: GasCanister
