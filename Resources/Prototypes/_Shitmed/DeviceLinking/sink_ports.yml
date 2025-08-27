@@ -4,6 +4,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
-signal-port-name-operating-table = Operating table
-signal-port-description-operating-table-receiver = Operating table signal receiver
-signal-port-description-operating-table-sender = Operating table signal sender
+- type: sinkPort
+  id: OperatingTableReceiver
+  name: signal-port-name-operating-table
+  description: signal-port-description-operating-table-receiver
