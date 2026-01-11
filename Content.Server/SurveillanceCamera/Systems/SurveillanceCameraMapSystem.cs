@@ -3,12 +3,14 @@ using Content.Server.Power.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.SurveillanceCamera.Components;
+using Content.Shared.Item.ItemToggle.Components; // Triad
 
 namespace Content.Server.SurveillanceCamera;
 
 public sealed class SurveillanceCameraMapSystem : EntitySystem
 {
     [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SurveillanceCameraSystem _camera = default!; // Triad
 
     public override void Initialize()
     {
@@ -21,6 +23,13 @@ public sealed class SurveillanceCameraMapSystem : EntitySystem
 
     private void OnCameraInit(Entity<SurveillanceCameraComponent> ent, ref MapInitEvent args)
     {
+        // Triad - Bodycameras ported from NF. This was moved here from SurveillanceCameraSystem.cs and modified.
+        if (TryComp<ItemToggleComponent>(ent, out var toggle))
+        {
+            _camera.SetActive(ent, toggle.Activated, ent.Comp);
+        }
+        // End Triad
+
         UpdateCameraMarker(ent);
     }
 

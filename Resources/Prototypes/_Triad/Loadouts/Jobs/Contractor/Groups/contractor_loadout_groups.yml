@@ -940,6 +940,7 @@
   - ContractorGeigerCounter
   - ContractorBinoculars
   - ContractorTapeRecorder # Mono - Moved from ContractorTrinkets.
+  - ContractorBodycam
   - ContractorWeaponProtoKineticAccelerator
   - ContractorPinpointerUniversal
   - ContractorShipyardRCD

@@ -6,6 +6,7 @@ using Content.Shared.Chat; // Einstein Engines - Languages
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.DeviceNetwork.Events;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Power;
 using Content.Shared.SurveillanceCamera;
 using Content.Shared.SurveillanceCamera.Components;
@@ -63,6 +64,7 @@ public sealed partial class SurveillanceCameraSystem : SharedSurveillanceCameraS
         SubscribeLocalEvent<SurveillanceCameraComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
         SubscribeLocalEvent<SurveillanceCameraComponent, SurveillanceCameraSetupSetName>(OnSetName);
         SubscribeLocalEvent<SurveillanceCameraComponent, SurveillanceCameraSetupSetNetwork>(OnSetNetwork);
+        SubscribeLocalEvent<SurveillanceCameraComponent, ItemToggledEvent>(OnToggled); // Frontier - togglable body cameras
 
         InitializeCollide();
     }
@@ -139,6 +141,13 @@ public sealed partial class SurveillanceCameraSystem : SharedSurveillanceCameraS
     {
         Deactivate(camera, component);
     }
+
+    // Frontier - Toggleable body cameras
+    private void OnToggled(Entity<SurveillanceCameraComponent> ent, ref ItemToggledEvent args)
+    {
+        SetActive(ent, args.Activated, ent.Comp);
+    }
+    // End Frontier
 
     private void OnSetName(EntityUid uid, SurveillanceCameraComponent component, SurveillanceCameraSetupSetName args)
     {

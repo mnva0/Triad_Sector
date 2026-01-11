@@ -15,6 +15,7 @@
     BoxForensicPad: 6
     LogProbeCartridge: 3
     ContrabandAppraisalTool: 10
+    ClothingNeckBodyCameraOff: 3
 #Bounty hunter
     ClothingOuterEVASuitMercenary: 4
     ClothingOuterEVASuitPrivateSec: 4
@@ -46,6 +47,7 @@
     BoxForensicPad: 4294967295 # Frontier: 6<Infinite
     LogProbeCartridge: 4294967295 # Frontier: 3<Infinite
     ContrabandAppraisalTool: 4294967295 # Frontier: 10<Infinite
+    ClothingNeckBodyCameraOff: 4294967295 # Infinite
     BlueprintWarlordSuit: 4294967295 # Mono: Infinite
 #Bounty hunter
     ClothingOuterEVASuitMercenary: 4294967295 # Frontier: 4<Infinite
