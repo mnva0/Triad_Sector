@@ -18696,3 +18696,16 @@ Entries:
   id: 2062
   time: '2026-03-22T19:44:22.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3201
+- author: Onezero0
+  changes:
+    - type: Add
+      message: >-
+        Added data farming as a research! Remember to screwdrive the boards to
+        change type.
+    - type: Tweak
+      message: >-
+        Faction base point generators are now fancy and
+        indestructible/unanchorable.
+  id: 2063
+  time: '2026-03-22T19:46:27.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2620
