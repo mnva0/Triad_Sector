@@ -19165,3 +19165,10 @@ Entries:
   id: 2113
   time: '2026-04-01T16:22:03.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/3635
+- author: UnicornOnLSD
+  changes:
+    - type: Add
+      message: Management has sent an ore box to the DIS Rig after customer complaints.
+  id: 2114
+  time: '2026-04-01T22:08:49.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/3672
