@@ -248,12 +248,6 @@ public sealed partial class ChatSystem : SharedChatSystem
         else
         {
             message = SanitizeInGameICMessage(source, message, out emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
-
-            // Was there an emote in the message? If so, send it.
-            if (player != null && emoteStr != message && emoteStr != null)
-            {
-                SendEntityEmote(source, emoteStr, range, nameOverride, ignoreActionBlocker);
-            }
         }
         // HardLight end
 
@@ -309,7 +303,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         {
             if (TryProccessRadioMessage(source, message, out var modMessage, out var channel))
             {
-                SendEntityWhisper(source, modMessage, range, channel, nameOverride, hideLog: hideLog, ignoreActionBlocker: true);
+                SendEntityWhisper(source, modMessage, range, channel, nameOverride, language, hideLog, ignoreActionBlocker: true);
                 return;
             }
         }
@@ -318,19 +312,19 @@ public sealed partial class ChatSystem : SharedChatSystem
         switch (desiredType)
         {
             case InGameICChatType.Speak:
-                SendEntitySpeak(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: true);
+                SendEntitySpeak(source, message, range, nameOverride, language, hideLog, ignoreActionBlocker: true);
                 break;
             case InGameICChatType.Whisper:
-                SendEntityWhisper(source, message, range, null, nameOverride, hideLog: hideLog, ignoreActionBlocker: true);
+                SendEntityWhisper(source, message, range, null, nameOverride, language, hideLog, ignoreActionBlocker: true);
                 break;
             case InGameICChatType.Emote:
-                SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: true);
+                SendEntityEmote(source, message, range, nameOverride, language, hideLog, ignoreActionBlocker: true);
                 break;
             case InGameICChatType.Subtle:
-                SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: true);
+                SendEntitySubtle(source, message, range, nameOverride, language, hideLog, true);
                 break;
             case InGameICChatType.SubtleOOC:
-                SendEntitySubtle(source, $"OOC: {message}", range, nameOverride, hideLog: hideLog, ignoreActionBlocker: true); // HardLight: Capitalized OOC for consistency with other OOC chats.
+                SendEntitySubtle(source, $"OOC: {message}", range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: true); // HardLight: Capitalized OOC for consistency with other OOC chats.
                 break;
         }
     }
@@ -858,6 +852,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         string action,
         ChatTransmitRange range,
         string? nameOverride,
+        LanguagePrototype language,
         bool hideLog = false,
         bool ignoreActionBlocker = false,
         NetUserId? author = null,
