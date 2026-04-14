@@ -31,6 +31,7 @@ using Content.Shared.Chat;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
+using Content.Server.Shuttles;
 
 namespace Content.Server.IoC
 {
@@ -83,6 +84,7 @@ namespace Content.Server.IoC
 
             IoCManager.Register<DiscordLink>();
             IoCManager.Register<DiscordChatLink>();
+            IoCManager.Register<ServerIdentityService>();
         }
     }
 }

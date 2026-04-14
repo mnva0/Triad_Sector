@@ -52,7 +52,6 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly SpeakOnUIClosedSystem _speakOnUIClosed = default!;
         [Dependency] private readonly SharedPointLightSystem _light = default!;
         [Dependency] private readonly EmagSystem _emag = default!;
-
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Frontier
         [Dependency] private readonly SharedAudioSystem _audioSystem = default!; // Frontier
         [Dependency] private readonly BankSystem _bankSystem = default!; // Frontier
@@ -89,6 +88,65 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
         }
 
+        public override void Update(float frameTime)
+        {
+            base.Update(frameTime);
+
+            var query = EntityQueryEnumerator<VendingMachineComponent>();
+            while (query.MoveNext(out var uid, out var comp))
+            {
+                if (comp.Ejecting)
+                {
+                    comp.EjectAccumulator += frameTime;
+                    if (comp.EjectAccumulator >= comp.EjectDelay)
+                    {
+                        comp.EjectAccumulator = 0f;
+                        comp.Ejecting = false;
+
+                        EjectItem(uid, comp);
+                    }
+                }
+
+                if (comp.Denying)
+                {
+                    comp.DenyAccumulator += frameTime;
+                    if (comp.DenyAccumulator >= comp.DenyDelay)
+                    {
+                        comp.DenyAccumulator = 0f;
+                        comp.Denying = false;
+
+                        TryUpdateVisualState(uid, comp);
+                    }
+                }
+
+                if (comp.DispenseOnHitCoolingDown)
+                {
+                    comp.DispenseOnHitAccumulator += frameTime;
+                    if (comp.DispenseOnHitAccumulator >= comp.DispenseOnHitCooldown)
+                    {
+                        comp.DispenseOnHitAccumulator = 0f;
+                        comp.DispenseOnHitCoolingDown = false;
+                    }
+                }
+
+                // Added block for charges
+                if (comp.EjectRandomCounter == comp.EjectRandomMax || _timing.CurTime < comp.EjectNextChargeTime)
+                    continue;
+
+                AddCharges(uid, 1, comp);
+                comp.EjectNextChargeTime = _timing.CurTime + comp.EjectRechargeDuration;
+                // Added block for charges
+            }
+            var disabled = EntityQueryEnumerator<EmpDisabledComponent, VendingMachineComponent>();
+            while (disabled.MoveNext(out var uid, out _, out var comp))
+            {
+                if (comp.NextEmpEject < _timing.CurTime)
+                {
+                    EjectRandom(uid, true, false, comp);
+                    comp.NextEmpEject += TimeSpan.FromSeconds(5 * comp.EjectDelay);
+                }
+            }
+        }
         private void OnVendingPrice(EntityUid uid, VendingMachineComponent component, ref PriceCalculationEvent args)
         {
             var price = 0.0;
@@ -577,65 +635,7 @@ namespace Content.Server.VendingMachines
             return component.Inventory.GetValueOrDefault(entryId);
         }
 
-        public override void Update(float frameTime)
-        {
-            base.Update(frameTime);
-
-            var query = EntityQueryEnumerator<VendingMachineComponent>();
-            while (query.MoveNext(out var uid, out var comp))
-            {
-                if (comp.Ejecting)
-                {
-                    comp.EjectAccumulator += frameTime;
-                    if (comp.EjectAccumulator >= comp.EjectDelay)
-                    {
-                        comp.EjectAccumulator = 0f;
-                        comp.Ejecting = false;
-
-                        EjectItem(uid, comp);
-                    }
-                }
-
-                if (comp.Denying)
-                {
-                    comp.DenyAccumulator += frameTime;
-                    if (comp.DenyAccumulator >= comp.DenyDelay)
-                    {
-                        comp.DenyAccumulator = 0f;
-                        comp.Denying = false;
-
-                        TryUpdateVisualState(uid, comp);
-                    }
-                }
-
-                if (comp.DispenseOnHitCoolingDown)
-                {
-                    comp.DispenseOnHitAccumulator += frameTime;
-                    if (comp.DispenseOnHitAccumulator >= comp.DispenseOnHitCooldown)
-                    {
-                        comp.DispenseOnHitAccumulator = 0f;
-                        comp.DispenseOnHitCoolingDown = false;
-                    }
-                }
-
-                // Added block for charges
-                if (comp.EjectRandomCounter == comp.EjectRandomMax || _timing.CurTime < comp.EjectNextChargeTime)
-                    continue;
-
-                AddCharges(uid, 1, comp);
-                comp.EjectNextChargeTime = _timing.CurTime + comp.EjectRechargeDuration;
-                // Added block for charges
-            }
-            var disabled = EntityQueryEnumerator<EmpDisabledComponent, VendingMachineComponent>();
-            while (disabled.MoveNext(out var uid, out _, out var comp))
-            {
-                if (comp.NextEmpEject < _timing.CurTime)
-                {
-                    EjectRandom(uid, true, false, comp);
-                    comp.NextEmpEject += TimeSpan.FromSeconds(5 * comp.EjectDelay);
-                }
-            }
-        }
+        // (Removed duplicate Update override; merged into single method above)
 
         public void TryRestockInventory(EntityUid uid, VendingMachineComponent? vendComponent = null)
         {

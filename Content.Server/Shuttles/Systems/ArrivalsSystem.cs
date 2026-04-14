@@ -93,7 +93,7 @@ public sealed class ArrivalsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PlayerSpawningEvent>(HandlePlayerSpawning, before: new []{ typeof(SpawnPointSystem)}, after: new [] { typeof(ContainerSpawnPointSystem)});
+        SubscribeLocalEvent<PlayerSpawningEvent>(HandlePlayerSpawning, before: new[] { typeof(SpawnPointSystem) }, after: new[] { typeof(ContainerSpawnPointSystem) });
 
         SubscribeLocalEvent<StationArrivalsComponent, StationPostInitEvent>(OnStationPostInit);
 
