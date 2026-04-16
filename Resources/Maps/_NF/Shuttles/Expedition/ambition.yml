@@ -3500,19 +3500,19 @@ entities:
     - type: Transform
       pos: 2.5,34.5
       parent: 1
-- proto: bluespacestash
-  entities:
-  - uid: 1705
-    components:
-    - type: Transform
-      pos: 0.5,30.5
-      parent: 1
-    - type: Physics
-      bodyType: Static
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          ents: []
+#- proto: bluespacestash
+#  entities:
+#  - uid: 1705
+#    components:
+#    - type: Transform
+#      pos: 0.5,30.5
+#      parent: 1
+#    - type: Physics
+#      bodyType: Static
+#    - type: ContainerContainer
+#      containers:
+#        storagebase: !type:Container
+#          ents: []
 - proto: BookshelfFilled
   entities:
   - uid: 348
