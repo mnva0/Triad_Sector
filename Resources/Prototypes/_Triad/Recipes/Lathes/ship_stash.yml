@@ -8,7 +8,7 @@
     Plasteel: 800
 
 - type: latheRecipe
-  id: MedicalBluespaceDeskFlatpack   # THIS is what research unlocks
+  id: MedicalBluespaceDeskFlatpack
   result: MedicalBluespaceDeskFlatpack
   completetime: 30
   materials:
@@ -17,16 +17,16 @@
     Plasteel: 1000
 
 - type: latheRecipe
-  id: BotanyTableFlatpack   # THIS is what research unlocks
+  id: BotanyTableFlatpack
   result: BotanyTableFlatpack
   completetime: 30
   materials:
     Glass: 2000
     Steel: 1000
-    WoodPlank: 1000
+    Wood: 1000
 
 - type: latheRecipe
-  id: CivilianStorageStashFlatpack   # THIS is what research unlocks
+  id: CivilianStorageStashFlatpack
   result: CivilianStorageStashFlatpack
   completetime: 30
   materials:

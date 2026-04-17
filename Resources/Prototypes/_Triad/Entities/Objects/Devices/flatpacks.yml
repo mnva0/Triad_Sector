@@ -86,3 +86,11 @@
   components:
   - type: Flatpack
     entity: BotanyTable
+
+- type: entity
+  id: CivilianStorageStashFlatpack
+  parent: BaseFlatpack
+  name: civilian storage stash flatpack
+  components:
+  - type: Flatpack
+    entity: CivilianStorageStash

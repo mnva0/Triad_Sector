@@ -99,12 +99,6 @@
   - ArtifactAnalyzerMachineCircuitboard
   - ArtifactCrusherMachineCircuitboard
   - DataFarmResearchCircuitboard
-  # Triad
-  - CivilianStorageStashCircuitboard
-  - BotanyTableCircuitboard
-  - MedicalBluespaceDeskCircuitboard  
-  - MilitaryStorageStashCircuitboard
-  # End Triad
 
 - type: latheRecipePack
   id: CameraBoards
