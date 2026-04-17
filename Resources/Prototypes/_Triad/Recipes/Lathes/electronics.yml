@@ -1,19 +1,34 @@
 - type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: MilitaryStorageStashCircuitboard
-  result: MilitaryStorageStashCircuitboard
+  id: MilitaryStorageStashFlatpack
+  result: MilitaryStorageStashFlatpack
+  completetime: 60
+  materials:
+    Steel: 1200
+    Plastitanium: 600
+    Plasteel: 800
 
 - type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: MedicalBluespaceDeskCircuitboard
-  result: MedicalBluespaceDeskCircuitboard
+  id: MedicalBluespaceDeskFlatpack   # THIS is what research unlocks
+  result: MedicalBluespaceDeskFlatpack
+  completetime: 30
+  materials:
+    Glass: 2000
+    Steel: 2000
+    Plasteel: 1000
 
 - type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: BotanyTableCircuitboard
-  result: BotanyTableCircuitboard
+  id: BotanyTableFlatpack   # THIS is what research unlocks
+  result: BotanyTableFlatpack
+  completetime: 30
+  materials:
+    Glass: 2000
+    Steel: 1000
+    WoodPlank: 1000
 
 - type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: CivilianStorageStashCircuitboard
-  result: CivilianStorageStashCircuitboard
+  id: CivilianStorageStashFlatpack   # THIS is what research unlocks
+  result: CivilianStorageStashFlatpack
+  completetime: 30
+  materials:
+    Steel: 800
+    Plastic: 300

@@ -2,7 +2,7 @@
   id: MilitaryStorageStash
   parent: BaseStructureDynamic
   name: military storage stash
-  description: Tbd
+  description: A hardened storage unit designed for long-term deployment. Contents are securely preserved across ship operations.
   components:
   - type: Sprite
     sprite: _Triad/Structure/Storage/ShipStashes/military_storage_stash.rsi
@@ -43,7 +43,7 @@
   id: MedicalBluespaceDesk
   parent: BaseStructureDynamic
   name: medical bluespace desk
-  description: Tbd
+  description: An advanced medical workstation utilizing bluespace compression. Safely retains its contents across ship saves.
   components:
   - type: Sprite
     sprite: _Triad/Structure/Storage/ShipStashes/medical_bluespace_desk.rsi
@@ -93,7 +93,7 @@
   id: BotanyTable
   parent: BaseStructureDynamic
   name: botany table
-  description: Tbd
+  description: A specialized workstation for plant research and cultivation. Stored materials remain intact between expeditions.
   components:
   - type: Sprite
     sprite: _Triad/Structure/Storage/ShipStashes/botany_table.rsi
@@ -143,7 +143,7 @@
   id: CivilianStorageStash
   parent: BaseStructureDynamic
   name: civilian storage stash
-  description: Tbd
+  description: A compact personal storage solution for everyday use. Items stored within persist between ship deployments.
   components:
   - type: Sprite
     sprite: _Triad/Structure/Storage/ShipStashes/civilian_storage_stash.rsi

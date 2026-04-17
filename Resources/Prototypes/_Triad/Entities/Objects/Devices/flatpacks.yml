@@ -61,3 +61,28 @@
   - type: Sprite
     layers:
     - state: command_airlock_directional
+
+# Ship Stash
+- type: entity
+  id: MilitaryStorageStashFlatpack
+  parent: BaseFlatpack
+  name: military storage stash flatpack
+  components:
+  - type: Flatpack
+    entity: MilitaryStorageStash
+
+- type: entity
+  id: MedicalBluespaceDeskFlatpack
+  parent: BaseFlatpack
+  name: medical bluespace desk flatpack
+  components:
+  - type: Flatpack
+    entity: MedicalBluespaceDesk
+
+- type: entity
+  id: BotanyTableFlatpack
+  parent: BaseFlatpack
+  name: medical bluespace desk flatpack
+  components:
+  - type: Flatpack
+    entity: BotanyTable
