@@ -14,7 +14,7 @@
           doAfter: 2
         - material: Cable
           amount: 5
-          doaAafter: 3
+          doAfter: 3
     
   - node: CivilianStorageStashNode
     entity: CivilianStorageStash
@@ -52,7 +52,7 @@
           doAfter: 6
         - material: Cable
           amount: 5
-          doaAafter: 3
+          doAfter: 3
     
   - node: MilitaryStorageStashNode
     entity: MilitaryStorageStash
@@ -90,7 +90,7 @@
           doAfter: 6
         - material: Cable
           amount: 5
-          doaAafter: 3
+          doAfter: 3
     
   - node: MedicalSecureStorageNode
     entity: MedicalSecureStorage
@@ -128,7 +128,7 @@
           doAfter: 6
         - material: Cable
           amount: 5
-          doaAafter: 3
+          doAfter: 3
     
   - node: BotanicalStorageUnitNode
     entity: BotanicalStorageUnit
