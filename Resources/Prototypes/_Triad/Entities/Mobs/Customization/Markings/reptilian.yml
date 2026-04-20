@@ -3,7 +3,7 @@
   bodyPart: Chest
   markingCategory: Chest
   sprites:
-  - sprite: _Triad/Mobs/Customization/Reptilian/underbellyfemale.rsi
+  - sprite: _Triad/Mobs/Customization/Reptilian/underbelly_feminine.rsi
     state: body_underbelly
 
 - type: marking
