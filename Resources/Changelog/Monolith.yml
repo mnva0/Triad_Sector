@@ -19387,3 +19387,12 @@ Entries:
   id: 2139
   time: '2026-04-20T14:51:18.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad-Sector/pull/33
+- author: Wuffindy
+  changes:
+    - type: Remove
+      message: Removed TSF, PDV, and USSP related jobs and category
+    - type: Remove
+      message: Removed faction related special guns in loadout for now
+  id: 2140
+  time: '2026-04-20T21:43:25.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad-Sector/pull/32
