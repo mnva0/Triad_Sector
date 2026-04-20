@@ -19396,3 +19396,12 @@ Entries:
   id: 2140
   time: '2026-04-20T21:43:25.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad-Sector/pull/32
+- author: TheRealMasterChief117
+  changes:
+    - type: Add
+      message: >-
+        Added two new markings, the feminine reptilian underbelly and an
+        alternate female reptilian chest. 
+  id: 2141
+  time: '2026-04-20T21:54:16.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad-Sector/pull/34
