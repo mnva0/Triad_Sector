@@ -147,8 +147,8 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    weight: 5 #Triad - reduced weight & Duration so its less prioritized to not spawn too much
-    duration: 30
+    weight: 6
+    duration: 50
   - type: VentCrittersRule
     entries:
     - id: MobCorticalBorer # Mono
