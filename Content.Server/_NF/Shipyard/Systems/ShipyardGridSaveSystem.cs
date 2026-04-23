@@ -18,7 +18,6 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Components;
 using Content.Shared.Implants.Components; // HardLight
-using Content.Shared.Light.Components; // HardLight
 using Content.Shared.Mind.Components; // HardLight
 using Content.Shared.Shuttles.Save; // For SendShipSaveDataClientMessage
 using Content.Shared.SprayPainter.Components; // HardLight
@@ -26,7 +25,6 @@ using Content.Shared.SprayPainter.Prototypes; // HardLight
 using Content.Shared.Storage.Components;
 using Content.Shared.VendingMachines;
 using Content.Shared.Wall; // WallMountComponent for preserving wall-mounted fixtures
-using Robust.Server.GameObjects; // HardLight
 using Robust.Server.Player;
 using Robust.Shared.Containers;
 using Robust.Shared.ContentPack;
@@ -39,8 +37,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes; // HardLight
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Markdown.Mapping;
-using Robust.Shared.Serialization.Markdown.Sequence;
-using Robust.Shared.Serialization.Markdown.Value;
 using Robust.Shared.Utility;
 using YamlDotNet.Core;
 using YamlDotNet.RepresentationModel;
@@ -255,6 +251,9 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             // Triad: Removing all EdgeSpreaderComponent
             RemoveEdgeSpreaderComponentComponentsOnGrid(gridUid);
 
+            // Triad: Remove all SavingContrabandComponent which some are illegal to own or possesion and others are causing problems with ship saving
+            RemoveSavingContrabandComponentComponentsOnGrid(gridUid);
+
             //_sawmill.Info($"Serializing ship grid {gridUid} as '{shipName}' after transient purge using direct serialization");
 
             // 1) Serialize the grid and its children to a MappingDataNode (engine-standard format)
@@ -355,6 +354,24 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         foreach (var uid in toRemove)
         {
             QueueDel(uid);
+        }
+    }
+
+    private void RemoveSavingContrabandComponentComponentsOnGrid(EntityUid gridUid)
+    {
+        var toRemove = new HashSet<EntityUid>();
+
+        var savingContraband = _entityManager.EntityQueryEnumerator<SavingContrabandComponent, TransformComponent>();
+        while (savingContraband.MoveNext(out var uid, out var _, out var xform))
+        {
+            if (xform.GridUid != gridUid)
+                continue;
+            toRemove.Add(uid);
+        }
+
+        foreach (var uid in toRemove)
+        {
+            Del(uid);
         }
     }
 

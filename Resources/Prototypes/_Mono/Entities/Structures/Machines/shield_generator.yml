@@ -187,6 +187,8 @@
   - type: ShipRepairable
     repairTime: 30
     repairCost: 300
+  - type: SavingContraband
+    examineText: ship-saving-contraband-3-text
 
 # TSF capital shield - inbetween POI and MS-500, meant for flyssa
 - type: entity
@@ -260,6 +262,8 @@
   - type: ShipRepairable
     repairTime: 30
     repairCost: 300
+  - type: SavingContraband
+    examineText: ship-saving-contraband-3-text
 
 # High-End
 - type: entity
