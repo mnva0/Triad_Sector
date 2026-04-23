@@ -55,6 +55,8 @@ def main():
 def get_most_recent_workflow(sess, github_repository, github_run):
     workflow_run = get_current_run(sess, github_repository, github_run)
     past_runs = get_past_runs(sess, workflow_run)
+    print(workflow_run)
+    print(past_runs)
 
     for run in past_runs["workflow_runs"]:
         if run["id"] == workflow_run["id"]:
@@ -96,6 +98,7 @@ def get_last_changelog() -> str:
     session.headers["X-GitHub-Api-Version"] = "2022-11-28"
 
     most_recent = get_most_recent_workflow(session, github_repository, github_run)
+    print(most_recent)
     head_commit = most_recent.get("head_commit")
     if head_commit and head_commit.get("id"):
         last_sha = head_commit["id"]
