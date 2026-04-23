@@ -237,6 +237,12 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             // HardLight: Remove components that fail serialization (e.g., player state) from entities on the grid.
             RemoveSerializationBlockingComponentsOnGrid(gridUid);
 
+            // Triad: Removing all EdgeSpreaderComponent
+            RemoveEdgeSpreaderComponentComponentsOnGrid(gridUid);
+
+            // Triad: Remove all SavingContrabandComponent which some are illegal to own or possesion and others are causing problems with ship saving
+            RemoveSavingContrabandComponentComponentsOnGrid(gridUid);
+
             //_sawmill.Info($"Serializing ship grid {gridUid} as '{shipName}' after transient purge using direct serialization");
 
             // 1) Serialize the grid and its children to a MappingDataNode (engine-standard format)
@@ -333,6 +339,24 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         foreach (var uid in toRemove)
         {
             QueueDel(uid);
+        }
+    }
+
+    private void RemoveSavingContrabandComponentComponentsOnGrid(EntityUid gridUid)
+    {
+        var toRemove = new HashSet<EntityUid>();
+
+        var savingContraband = _entityManager.EntityQueryEnumerator<SavingContrabandComponent, TransformComponent>();
+        while (savingContraband.MoveNext(out var uid, out var _, out var xform))
+        {
+            if (xform.GridUid != gridUid)
+                continue;
+            toRemove.Add(uid);
+        }
+
+        foreach (var uid in toRemove)
+        {
+            Del(uid);
         }
     }
 

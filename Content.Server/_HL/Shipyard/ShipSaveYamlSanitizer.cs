@@ -63,7 +63,7 @@ public static class ShipSaveYamlSanitizer
     private static readonly HashSet<string> FilteredPrototypes = new(StringComparer.OrdinalIgnoreCase)
     {
         // Machines & circuitboards
-        "MachineFlatpacker",
+        // While moving this into a SavingContraband component remove it one by one
         "CommsComputerCircuitboard",
         "ComputerDNAScanner",
         "ComputerExpeditionDiskPrinter",
