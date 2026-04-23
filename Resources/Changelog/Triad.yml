@@ -24,3 +24,14 @@ Entries:
   id: 2145
   time: '2026-04-23T04:18:47.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/6
+- author: DDrakov
+  changes:
+    - type: Add
+      message: New component for ship saving contraband
+    - type: Tweak
+      message: Data farms will be deleted upon saving
+    - type: Tweak
+      message: Some items will be removed upon deletion and illegal to possess
+  id: 2146
+  time: '2026-04-23T11:27:50.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/1
