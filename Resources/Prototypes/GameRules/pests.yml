@@ -151,5 +151,6 @@
     duration: 50
   - type: VentCrittersRule
     entries:
+    specialEntries: #Traid - Guarentees at least one borer spawn on event
     - id: MobCorticalBorer # Mono
       prob: 0.001 # Mono
