@@ -35,3 +35,14 @@ Entries:
   id: 2146
   time: '2026-04-23T11:27:50.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/1
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed loaded shield generators spamming the shield dissipate sound
+    - type: Fix
+      message: Maybe fix AME controllers breaking on ship load
+    - type: Fix
+      message: Fixed loaded ships starting with no gravity
+  id: 2147
+  time: '2026-04-24T22:20:18.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/10
