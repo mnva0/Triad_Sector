@@ -89,7 +89,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly ShuttleConsoleLockSystem _shuttleConsoleLock = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly TagSystem _tagSystem = default!;
-    [Dependency] private readonly ShipyardGridSaveSystem _shipyardGridSaveSystem = default!; // Triad
 
     private static readonly ProtoId<TagPrototype> CrewedShuttleTag = "CrewedShuttle";
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
@@ -502,7 +501,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
 
         // Ensure the limits for limited entites doesn't exceed while saving
-        if (!_shipyardGridSaveSystem.CheckGridEntityLimits(shuttleUid.Value, out var message))
+        if (!_shipyardGridSave.CheckGridEntityLimits(shuttleUid.Value, out var message))
         {
             ConsolePopup(player, message);
             PlayDenySound(player, uid, component);
@@ -510,7 +509,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
 
         // Attempt to save the ship
-        if (!_shipyardGridSaveSystem.TrySaveShip(shuttleUid.Value, targetId, playerSession))
+        if (!_shipyardGridSave.TrySaveShip(shuttleUid.Value, targetId, playerSession))
         {
             ConsolePopup(player, $"Failed to store ship {deed.ShuttleName}.");
             PlayDenySound(player, uid, component);
