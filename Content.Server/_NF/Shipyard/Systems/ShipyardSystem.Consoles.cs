@@ -52,7 +52,7 @@ using Content.Server.StationEvents.Components;
 using Content.Shared._Mono.Company;
 using Content.Shared.Forensics.Components;
 using Content.Shared.Shuttles.Components;
-using Content.Server.Shuttles.Systems;
+using Content.Shared._NF.Shuttles.Save; // Triad
 using Robust.Shared.Player;
 using Content.Shared._Mono.Ships.Components;
 using Content.Shared._Mono.Shipyard;
@@ -60,7 +60,6 @@ using Content.Shared.Tag;
 using Robust.Shared.Timing;
 using Robust.Shared.Log;
 using Content.Shared._HL.Shipyard;
-using Content.Server.Shuttles.Save;
 
 // Suppress naming style rule for the _NF namespace prefix (project convention)
 #pragma warning disable IDE1006
@@ -518,7 +517,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-        ConsolePopup(player, $"Storing ship {deed.ShuttleName} at shipyard.. Have a nice day!");
+        ConsolePopup(player, $"Storing ship {deed.ShuttleName} at shipyard. Have a nice day!");
         PlayConfirmSound(player, uid, component);
 
         // Refresh UI with current deed info and player's balance
@@ -854,7 +853,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         {
             try
             {
-                RaiseNetworkEvent(new Content.Shared.Shuttles.Save.DeleteLocalShipFileMessage(args.SourceFilePath!), session);
+                RaiseNetworkEvent(new DeleteLocalShipFileMessage(args.SourceFilePath!), session);
                 Logger.Info($"Requested client to delete local ship file '{args.SourceFilePath}' after successful load");
             }
             catch (Exception ex)
