@@ -149,6 +149,7 @@
     earliestStart: 15
     weight: 6
     duration: 50
+    reoccurrenceDelay: 25 # Triad - add a delay so its not spammed, 25 minute averaging about 2-3 events per hour
   - type: VentCrittersRule
     entries:
     specialEntries: #Triad - Guarentees at least one borer spawn on event
