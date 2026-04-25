@@ -321,7 +321,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-gas-leak-nf-end-announcement # Frontier: add nf-
-    weight: 5
+    weight: 5 #Triad: 5 < 8
     earliestStart: 15 # Frontier
     reoccurrenceDelay: 90 # Triad: 1 hour 30 minute
   - type: GasLeakRule

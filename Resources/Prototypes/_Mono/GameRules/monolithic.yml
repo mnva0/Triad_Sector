@@ -9,7 +9,7 @@
       path: /Audio/Announcements/attention.ogg
     warningAnnouncement: mono-monolithic-event-fragment-warning-announcement
     endAnnouncement: mono-monolithic-event-fragment-end-announcement
-    earliestStart: 20
+    earliestStart: 20 #Triad 20 < 10
     weight: 5
     duration: 1350
     maxDuration: 1560
