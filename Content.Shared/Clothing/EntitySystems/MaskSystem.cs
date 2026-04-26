@@ -38,7 +38,7 @@ public sealed class MaskSystem : EntitySystem
     private void OnToggleMask(Entity<MaskComponent> ent, ref ToggleMaskEvent args)
     {
         var (uid, mask) = ent;
-        if (mask.ToggleActionEntity == null || !_timing.IsFirstTimePredicted || !mask.IsToggled)
+        if (mask.ToggleActionEntity == null || !mask.IsToggleable)
             return;
 
         if (!_inventorySystem.TryGetSlotEntity(args.Performer, "mask", out var existing) || !uid.Equals(existing))
@@ -50,7 +50,7 @@ public sealed class MaskSystem : EntitySystem
         var msg = $"action-mask-pull-{dir}-popup-message";
         _popupSystem.PopupClient(Loc.GetString(msg, ("mask", uid)), args.Performer, args.Performer);
 
-        ToggleMaskComponents(uid, mask, args.Performer, mask.EquippedPrefix);
+        ToggleMaskComponents(uid, mask, args.Performer);
     }
 
     // set to untoggled when unequipped, so it isn't left in a 'pulled down' state
@@ -60,22 +60,22 @@ public sealed class MaskSystem : EntitySystem
             return;
 
         mask.IsToggled = false;
-        ToggleMaskComponents(uid, mask, args.Equipee, mask.EquippedPrefix, true);
+        ToggleMaskComponents(uid, mask, args.Equipee);
     }
 
     /// <summary>
     /// Called after setting IsToggled, raises events and dirties.
     /// </summary>
-    private void ToggleMaskComponents(EntityUid uid, MaskComponent mask, EntityUid wearer, string? equippedPrefix = null, bool isEquip = false)
+    private void ToggleMaskComponents(EntityUid uid, MaskComponent mask, EntityUid wearer)
     {
         Dirty(uid, mask);
         if (mask.ToggleActionEntity is {} action)
             _actionSystem.SetToggled(action, mask.IsToggled);
 
-        var maskEv = new ItemMaskToggledEvent((wearer, mask), wearer);
+        var maskEv = new ItemMaskToggledEvent((uid, mask), wearer);
         RaiseLocalEvent(uid, ref maskEv);
 
-        var wearerEv = new WearerMaskToggledEvent((wearer, mask));
+        var wearerEv = new WearerMaskToggledEvent((uid, mask));
         RaiseLocalEvent(wearer, ref wearerEv);
     }
 

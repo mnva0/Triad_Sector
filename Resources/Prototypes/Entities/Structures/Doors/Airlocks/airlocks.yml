@@ -42,6 +42,16 @@
 
 - type: entity
   parent: Airlock
+  id: AirlockSalvage
+  suffix: Salvage
+  components:
+  # - type: Sprite
+    # sprite: Structures/Doors/Airlocks/Standard/salvage.rsi TODO
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: Airlock
   id: AirlockHydroponics
   suffix: Hydroponics
   components:

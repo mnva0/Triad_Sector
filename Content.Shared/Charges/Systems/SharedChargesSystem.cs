@@ -9,6 +9,8 @@ namespace Content.Shared.Charges.Systems;
 // Mono - make partial
 public abstract partial class SharedChargesSystem : EntitySystem
 {
+    [Dependency] protected readonly IGameTiming _timing = default!;
+
     /*
      * Despite what a bunch of systems do you don't need to continuously tick linear number updates and can just derive it easily.
      */
@@ -22,7 +24,7 @@ public abstract partial class SharedChargesSystem : EntitySystem
         SubscribeLocalEvent<LimitedChargesComponent, ActionAttemptEvent>(OnChargesAttempt);
         SubscribeLocalEvent<LimitedChargesComponent, MapInitEvent>(OnChargesMapInit);
         SubscribeLocalEvent<LimitedChargesComponent, ActionPerformedEvent>(OnChargesPerformed);
-        
+
         InitializeAmmo(); // Mono
     }
 
