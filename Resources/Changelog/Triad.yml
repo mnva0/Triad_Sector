@@ -1,0 +1,121 @@
+Entries:
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed stashes having no collision
+  id: 2143
+  time: '2026-04-21T23:27:05.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/2
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixes door electronics and lights being deleted on ship save
+    - type: Fix
+      message: Fixed constructed lights spawning filled
+    - type: Fix
+      message: 'Bedsheets, plushies, forks/spoons, and plates now save on ships '
+  id: 2144
+  time: '2026-04-22T00:08:23.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/3
+- author: Triad-Sector
+  changes:
+    - type: Tweak
+      message: HTNs to make the auto pilot better
+  id: 2145
+  time: '2026-04-23T04:18:47.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/6
+- author: DDrakov
+  changes:
+    - type: Add
+      message: New component for ship saving contraband
+    - type: Tweak
+      message: Data farms will be deleted upon saving
+    - type: Tweak
+      message: Some items will be removed upon deletion and illegal to possess
+  id: 2146
+  time: '2026-04-23T11:27:50.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/1
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed loaded shield generators spamming the shield dissipate sound
+    - type: Fix
+      message: Maybe fix AME controllers breaking on ship load
+    - type: Fix
+      message: Fixed loaded ships starting with no gravity
+  id: 2147
+  time: '2026-04-24T22:20:18.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/10
+- author: DDrakov
+  changes:
+    - type: Fix
+      message: Fix stash description
+    - type: Fix
+      message: Fix stash decon steps
+    - type: Remove
+      message: Remove S4 mech from research
+    - type: Remove
+      message: >-
+        Remove USSP R&D and Omni Jug from vend, there's only one USSP R&D and
+        that is in Camelot. Requested by Admins
+    - type: Tweak
+      message: Changes sevas tech to 20 minutes instead of 7.5 minutes
+    - type: Fix
+      message: 'Changelog FTL '
+    - type: Fix
+      message: Fixes gaslock docking cherry-picked from Mono
+  id: 2148
+  time: '2026-04-25T00:12:50.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/11
+- author: Triad-Sector
+  changes:
+    - type: Fix
+      message: >-
+        Flatpacks now use the collision of the flatpacked entity, so they can be
+        opened on tables and aren't blocked by ghosts.
+    - type: Tweak
+      message: Changed Sultan's shotgun sell price!
+    - type: Fix
+      message: Fixed a really easy little effort cash flow method!
+    - type: Fix
+      message: >-
+        ASM-220 torpedoes should be less likely to blow themselves or their own
+        launcher up now.
+    - type: Tweak
+      message: Sultan Pulsar no longer uses a static price, instead based off materials
+    - type: Tweak
+      message: >-
+        Autopulser capacity reduced, ADM version maxangle increased to match
+        asakim version
+    - type: Tweak
+      message: Tarantula update again, used the wrong file
+    - type: Tweak
+      message: Rules updated once again
+  id: 2149
+  time: '2026-04-25T06:01:33.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/12
+- author: Wuffindy
+  changes:
+    - type: Tweak
+      message: some grid related events may now spawn further away, up 10000 blocks
+    - type: Tweak
+      message: increased delay of most events, especially the ones that is too frequent
+    - type: Tweak
+      message: critter pests should be rarer now
+  id: 2150
+  time: '2026-04-25T12:53:41.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/7
+- author: Triad-Sector
+  changes:
+    - type: Fix
+      message: EVA helmet lights
+    - type: Fix
+      message: Fixed loadout UI windows having the wrong title.
+    - type: Add
+      message: >-
+        Small (5x5) and normal (7x7) sized nuclear-fission reactors for TSF,
+        PDV, USSP, CC, and Civilians. Currently not mapped anywhere, with
+        corresponding turbines (3x2 and 3x5).
+  id: 2151
+  time: '2026-04-26T01:46:20.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/14
