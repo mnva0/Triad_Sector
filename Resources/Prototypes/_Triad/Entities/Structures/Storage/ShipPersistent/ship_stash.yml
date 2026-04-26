@@ -23,7 +23,7 @@
   parent: BasePersistentShipStorageStash
   id: CivilianStorageStash
   name: civilian storage stash
-  description: Tbd
+  description: A flatpack personal storage unit. Deployed stashes retain their contents between ship saves.
   components:
     - type: Sprite
       sprite: _Triad/Structure/Storage/ShipStashes/civilian_storage_stash.rsi
