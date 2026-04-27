@@ -82,7 +82,7 @@
 
 - type: entity
   id: SmugglingFaxBig
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventLongDelay
   components:
   - type: StationEvent
     weight: 50 # Fairly common. #Triad 50 < 100
