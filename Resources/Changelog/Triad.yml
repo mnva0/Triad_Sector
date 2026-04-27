@@ -143,3 +143,16 @@ Entries:
   id: 2153
   time: '2026-04-27T14:10:34.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/15
+- author: DDrakov
+  changes:
+    - type: Add
+      message: Add a name to asteroid, port from Monolith
+    - type: Fix
+      message: Fixes bounty command access, able to remove and adding a new one
+    - type: Tweak
+      message: >-
+        Asteroids made to load ahead of your velocity to prevent them from
+        spawning in front of you when going fast.
+  id: 2154
+  time: '2026-04-27T14:11:29.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/16
