@@ -15,13 +15,14 @@ namespace Content.Client.Shuttles.Save
         private static readonly Dictionary<string, string> CachedShipData = new();
         private static readonly Dictionary<string, (string shipName, DateTime timestamp)> ShipMetadataCache = new();
 
-        /**
-         * Triad start
-         * @brief Holds all file paths whitelisted for DeleteLocalShipFileMessage
-         *
-         * If the filepath isn't in this collection, it cannot be deleted my that message.
-         * This prevents a rogue server from deleting non-ship-related files using path traversal trick shots
-         */
+        // Triad start
+        /// <summary>
+        ///     Holds all file paths whitelisted for <see cref="DeleteLocalShipFileMessage"/>
+        /// </summary>
+        /// <remarks>
+        ///     If the filepath isn't in this collection, it cannot be deleted by that message.
+        ///     This prevents a rogue server from deleting non-ship-related files using path traversal trick shots
+        /// </remarks>
         private static readonly List<string> DeletableShipPaths = new();
         // Triad end
 
