@@ -134,3 +134,12 @@ Entries:
   id: 2152
   time: '2026-04-27T02:47:32.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/17
+- author: DDrakov
+  changes:
+    - type: Fix
+      message: voucher ship being sellable
+    - type: Fix
+      message: 'change the description of civilian stash '
+  id: 2153
+  time: '2026-04-27T14:10:34.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/15
