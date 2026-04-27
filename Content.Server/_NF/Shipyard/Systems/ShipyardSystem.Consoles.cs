@@ -529,13 +529,17 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         ConsolePopup(player, $"Storing ship {deed.ShuttleName} at shipyard. Have a nice day!");
         PlayConfirmSound(player, uid, component);
 
+        var name = GetFullName(deed);
+        SendSaveMessage(uid, deed.ShuttleOwner!, name, component.ShipyardChannel, player, secret: false);
+        if (component.SecretShipyardChannel is { } secretChannel)
+            SendSaveMessage(uid, deed.ShuttleOwner!, name, secretChannel, player, secret: true);
+
         // Refresh UI with current deed info and player's balance
         int balance = 0;
         if (TryComp<BankAccountComponent>(player, out var bankAcc))
             balance = bankAcc.Balance;
 
-        var fullName = GetFullName(deed);
-        RefreshState(uid, balance, true, fullName, 0, targetId, (ShipyardConsoleUiKey)args.UiKey, false);
+        RefreshState(uid, balance, true, null, 0, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
     }
 
     public void OnLoadMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleLoadMessage args)
@@ -1120,6 +1124,23 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving", ("owner", player!), ("vessel", name!), ("player", seller)), InGameICChatType.Speak, true);
         }
     }
+
+    // Triad start
+    private void SendSaveMessage(EntityUid uid, string? player, string name, string shipyardChannel, EntityUid saver, bool secret)
+    {
+        var channel = _prototypeManager.Index<RadioChannelPrototype>(shipyardChannel);
+
+        if (secret)
+        {
+            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-leaving-secret"), InGameICChatType.Speak, true);
+        }
+        else
+        {
+            _radio.SendRadioMessage(uid, Loc.GetString("shipyard-console-saved", ("owner", player!), ("vessel", name!), ("player", saver)), channel, uid);
+            _chat.TrySendInGameICMessage(uid, Loc.GetString("shipyard-console-saved", ("owner", player!), ("vessel", name!), ("player", saver)), InGameICChatType.Speak, true);
+        }
+    }
+    // Triad End
 
     private void PlayDenySound(EntityUid playerUid, EntityUid consoleUid, ShipyardConsoleComponent component)
     {
