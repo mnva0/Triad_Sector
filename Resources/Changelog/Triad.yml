@@ -119,3 +119,18 @@ Entries:
   id: 2151
   time: '2026-04-26T01:46:20.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/14
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: >-
+        Internals and gas canisters are now predicted. There should be no delay
+        when you use the canister UI or enable internals.
+    - type: Tweak
+      message: >-
+        Ported the spray painter rework from Wizden, allowing you to paint way
+        more objects.
+    - type: Fix
+      message: Maybe fix self-recharging weapons breaking on ship load
+  id: 2152
+  time: '2026-04-27T02:47:32.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/17
