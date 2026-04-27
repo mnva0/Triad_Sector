@@ -12,8 +12,8 @@
   id: USSPCamelot
   parent: [BasePOI, BaseRepairablePOI]
   name: 'Camelot Station'
-  minimumDistance: 7500 # Triad 7500 < 10650
-  maximumDistance: 8500 # Triad 8500 < 12400
+  minimumDistance: 8500 # Triad 8500 < 10650
+  maximumDistance: 10000 # Triad 1000 < 12400
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueUSSP, MonoTSFUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/camelot.yml
