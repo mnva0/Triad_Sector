@@ -19,7 +19,7 @@
 
 - type: entity
   id: MouseMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -45,7 +45,7 @@
 
 - type: entity
   id: KingRatMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -71,7 +71,7 @@
 
 - type: entity
   id: CockroachMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -93,7 +93,7 @@
 
 - type: entity
   id: SnailMigrationLowPop
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -112,7 +112,7 @@
 
 - type: entity
   id: SnailMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
