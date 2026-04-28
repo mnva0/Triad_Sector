@@ -314,7 +314,7 @@
 
 - type: entity
   id: GasLeak
-  parent: BaseStationEventNFModerateDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-nf-start-announcement # Frontier: add nf-
@@ -355,7 +355,7 @@
 #  - type: PowerGridCheckRule
 
 - type: entity
-  parent: BaseStationEventNFModerateDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   id: SolarFlare
   components:
   - type: StationEvent
