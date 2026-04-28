@@ -82,7 +82,7 @@
 
 - type: entity
   id: BluespaceVaultSmallError
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventShortDelay # Triad, didnt change anything, for what t's worth, keep it as is
   components:
   - type: StationEvent
     startAnnouncement: station-event-bluespace-vault-start-announcement
@@ -123,7 +123,7 @@
 
 - type: entity
   id: BluespaceSyndicateFTLInterception
-  parent: BaseStationEventLongDelay
+  parent: BaseStationEventLongDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-bluespace-generic-ftl-start-announcement

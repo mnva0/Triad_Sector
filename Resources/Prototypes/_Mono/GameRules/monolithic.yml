@@ -1,7 +1,7 @@
 
 - type: entity
   id: MonolithFragmentSmallAppearance
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay
   components:
   - type: StationEvent
     startAnnouncement: mono-monolithic-event-fragment-start-announcement

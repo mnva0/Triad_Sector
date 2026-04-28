@@ -1,6 +1,6 @@
 - type: entity
   id: BluespaceSalvage
-  parent: BaseStationEventNFModerateDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   name: Colossus Sector Bluespace Monitoring # This name shows up in the radio messages.
   categories: [ HideSpawnMenu ]
   components:
