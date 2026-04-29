@@ -123,12 +123,12 @@ public sealed class SprayPainterSystem : SharedSprayPainterSystem
     /// </summary>
     private void OnCanisterPainted(Entity<GasCanisterComponent> ent, ref EntityPaintedEvent args)
     {
-        var dummy = Spawn(args.Prototype);
+        // var dummy = Spawn(args.Prototype); Triad temp removal until it's fixed
 
-        var destructibleComp = EnsureComp<DestructibleComponent>(dummy);
-        CopyComp(dummy, ent, destructibleComp);
+        // var destructibleComp = EnsureComp<DestructibleComponent>(dummy);
+        // CopyComp(dummy, ent, destructibleComp);
 
-        Del(dummy);
+        // Del(dummy);
     }
 
     private void OnPipeDoAfter(Entity<SprayPainterComponent> ent, ref SprayPainterPipeDoAfterEvent args)
