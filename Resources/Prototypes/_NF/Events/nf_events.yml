@@ -41,7 +41,7 @@
 
 - type: entity
   id: BluespaceSyndicateCrate
-  parent: BaseStationEventNFModerateDelay
+  parent: BaseStationEventLongDelay # Triad change to long cause its basically just a free loot
   components:
   - type: StationEvent
     startAnnouncement: bluespace-syndicate-crate-event-announcement
@@ -82,7 +82,7 @@
 
 - type: entity
   id: SmugglingFaxBig
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventLongDelay # Triad changed to long
   components:
   - type: StationEvent
     weight: 50 # Fairly common. #Triad 50 < 100

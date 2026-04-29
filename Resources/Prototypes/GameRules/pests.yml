@@ -19,7 +19,7 @@
 
 - type: entity
   id: MouseMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -38,14 +38,14 @@
       prob: 0.005 # Triad
     - id: MobMouseCancer
       prob: 0.0005 # Triad
-    specialEntries: # Mono
-    - id: MobCorticalBorer # Mono
-      prob: 0.001 # Mono
+    # specialEntries: # Mono # Triad disable till consent is fixed
+    # - id: MobCorticalBorer # Mono
+    #   prob: 0.001 # Mono
 # Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
 
 - type: entity
   id: KingRatMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -71,7 +71,7 @@
 
 - type: entity
   id: CockroachMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -87,13 +87,13 @@
       prob: 0.001 # Triad
     - id: MobRosyMothroach # Frontier
       prob: 0.001 # Triad
-    specialEntries: # Mono
-    - id: MobCorticalBorer # Mono
-      prob: 0.001 # Mono
+    # specialEntries: # Mono # Triad disable till consent is fixed
+    # - id: MobCorticalBorer # Mono
+    #   prob: 0.001 # Mono
 
 - type: entity
   id: SnailMigrationLowPop
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -112,7 +112,7 @@
 
 - type: entity
   id: SnailMigration
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventNFModerateDelay # Triad
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-nf-start-announcement # Frontier: add nf-
@@ -132,6 +132,6 @@
       prob: 0.001 # Triad
     - id: MobSnailInstantDeath
       prob: 0.00001 #  ~ 1:2000 snails
-    specialEntries: # Mono
-    - id: MobCorticalBorer # Mono
-      prob: 0.001 # Mono
+    # specialEntries: # Mono # Triad disable till consent is fixed
+    # - id: MobCorticalBorer # Mono
+    #   prob: 0.001 # Mono
