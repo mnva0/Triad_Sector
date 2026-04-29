@@ -178,3 +178,22 @@ Entries:
   id: 2156
   time: '2026-04-29T02:00:34.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/20
+- author: Wuffindy
+  changes:
+    - type: Remove
+      message: Disabled Polaris and sent them into the nearest black hole
+    - type: Remove
+      message: Banished Cortical Borers to the shadow realm for the time being
+    - type: Tweak
+      message: >-
+        Letoferol should no longer be obtained in game (Synd Crate, Uplink n
+        Polaris)
+    - type: Tweak
+      message: >-
+        some Dungeon POIs are now deeper in the outer ring while Camelot is
+        slightly close
+    - type: Tweak
+      message: adjust some more regarding events
+  id: 2157
+  time: '2026-04-29T02:10:35.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/18
