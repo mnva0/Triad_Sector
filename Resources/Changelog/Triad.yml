@@ -197,3 +197,16 @@ Entries:
   id: 2157
   time: '2026-04-29T02:10:35.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/18
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: >-
+        Fixed cryopods, handheld mass scanners, and hardsuit mass scanners not
+        being activatable by 'E' (activate in world keybind)
+    - type: Fix
+      message: >-
+        Fixed modsuit helmets not acting as breath masks. You can now connect
+        internals to them.
+  id: 2158
+  time: '2026-04-30T23:00:07.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/23
