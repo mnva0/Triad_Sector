@@ -210,3 +210,10 @@ Entries:
   id: 2158
   time: '2026-04-30T23:00:07.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/23
+- author: DDrakov
+  changes:
+    - type: Add
+      message: Add contraband component and examine to OOC banned items
+  id: 2159
+  time: '2026-05-01T01:06:33.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/24
