@@ -338,6 +338,10 @@
     autoRechargePause: true
     autoRechargePauseTime: 30
   # End Mono
+  # Triad Start
+  - type: SavingContraband
+    examineText: ship-saving-contraband-2-text
+  # Triad End
 
 - type: entity
   name: LWC pulse carbine
@@ -387,6 +391,10 @@
     autoRechargePause: true
     autoRechargePauseTime: 30
   # End Mono
+  # Triad Start
+  - type: SavingContraband
+    examineText: ship-saving-contraband-2-text
+  # Triad End
 
 - type: entity
   name: NT pulse rifle
@@ -434,8 +442,10 @@
     walkModifier: 0.90
     sprintModifier: 0.85
   # End Mono
-
-  # Mono Addition
+  # Triad Start
+  - type: SavingContraband
+    examineText: ship-saving-contraband-2-text
+  # Triad End
 
 - type: entity
   name: Cyborg pulse rifle

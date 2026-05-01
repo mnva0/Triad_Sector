@@ -11,6 +11,8 @@ public sealed class SavingContrabandSystem : EntitySystem
 
     private void OnExamined(Entity<SavingContrabandComponent> ent, ref ExaminedEvent args)
     {
+        if (ent.Comp.ExamineText == null)
+            return;
         args.PushMarkup(Loc.GetString(ent.Comp.ExamineText));
     }
 }
