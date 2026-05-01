@@ -5,6 +5,9 @@
   name: PDA
   description: Personal Data Assistant.
   components:
+  # Triad add start
+  - type: SavingContraband
+  # Triad end
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:

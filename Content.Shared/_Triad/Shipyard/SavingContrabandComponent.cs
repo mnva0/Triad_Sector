@@ -7,5 +7,5 @@ namespace Content.Shared._Triad.Shipyard;
 public sealed partial class SavingContrabandComponent : Component
 {
     [DataField]
-    public LocId ExamineText;
+    public LocId? ExamineText;
 }
