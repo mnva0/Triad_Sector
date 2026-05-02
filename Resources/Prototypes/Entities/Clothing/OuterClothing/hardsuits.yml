@@ -1249,10 +1249,6 @@
       head: ClothingHeadHelmetCBURN
       helmetcover: ClothingHeadHelmetCoverBlock
       helmetattachment: ClothingHeadHelmetAttachmentBlock
-  # Triad add start
-  - type: SavingContraband
-    examineText: ship-saving-contraband-2-text
-  # Triad end
 
 #MISC. HARDSUITS
 #Clown Hardsuit
