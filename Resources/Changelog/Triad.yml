@@ -224,3 +224,20 @@ Entries:
   id: 2160
   time: '2026-05-03T01:21:51.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/26
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Ships can no longer be saved if there are any mobs onboard.
+    - type: Tweak
+      message: >-
+        SRD now works on loaded ships. Any SRD data will be overwritten upon
+        save, so make sure you repair your ship before you save!
+    - type: Tweak
+      message: >-
+        Loading a ship will now give you the relative direction of your ship,
+        like purchasing.
+    - type: Tweak
+      message: Medical stashes can now fit medipen and syringe cases
+  id: 2161
+  time: '2026-05-03T03:32:01.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/25
