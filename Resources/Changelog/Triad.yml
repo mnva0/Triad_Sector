@@ -241,3 +241,14 @@ Entries:
   id: 2161
   time: '2026-05-03T03:32:01.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/25
+- author: DDrakov
+  changes:
+    - type: Remove
+      message: Serkesh from scrapyard
+    - type: Remove
+      message: Flashpoint from exped shipyard
+    - type: Remove
+      message: Remove fun!
+  id: 2162
+  time: '2026-05-05T12:00:24.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/30
