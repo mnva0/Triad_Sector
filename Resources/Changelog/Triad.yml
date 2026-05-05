@@ -252,3 +252,12 @@ Entries:
   id: 2162
   time: '2026-05-05T12:00:24.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/30
+- author: Erol509
+  changes:
+    - type: Add
+      message: >-
+        Added new race: Avali. They have been ported mainly from Starlight with
+        a couple of fixes from Hardlight. 
+  id: 2163
+  time: '2026-05-05T12:02:30.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/13
