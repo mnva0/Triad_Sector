@@ -284,3 +284,14 @@ Entries:
   id: 2166
   time: '2026-05-06T01:42:45.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/27
+- author: AlexisMoonlight
+  changes:
+    - type: Add
+      message: Added civilian ship Gondola
+    - type: Add
+      message: Added randomly spawning and buyable lewd toys crate.
+    - type: Add
+      message: Added sauna atmos devices for mapping
+  id: 2167
+  time: '2026-05-06T02:10:45.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/22
