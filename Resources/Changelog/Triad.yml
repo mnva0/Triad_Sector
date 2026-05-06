@@ -273,3 +273,14 @@ Entries:
   id: 2165
   time: '2026-05-06T01:42:21.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/34
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed ghosts being able to see subtle chat
+    - type: Fix
+      message: Gave subtle OOC a pink color
+    - type: Fix
+      message: Fixed being able to chat while crit or dead
+  id: 2166
+  time: '2026-05-06T01:42:45.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/27
