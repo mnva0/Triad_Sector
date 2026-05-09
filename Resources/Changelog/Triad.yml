@@ -336,3 +336,12 @@ Entries:
   id: 2172
   time: '2026-05-09T21:55:38.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/45
+- author: rebaserHEAD
+  changes:
+    - type: Add
+      message: >-
+        Jukebox UI supports search, queue, repeat/shuffle, and artist lines on
+        tracks.
+  id: 2173
+  time: '2026-05-09T22:28:24.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/48
