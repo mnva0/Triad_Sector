@@ -323,3 +323,16 @@ Entries:
   id: 2171
   time: '2026-05-09T12:04:03.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/41
+- author: rebaserHEAD
+  changes:
+    - type: Add
+      message: >-
+        NF magnet box variants (ore, construction, plant, rubbish, treasure)
+        with a shared RSI and migration for legacy box entities.
+    - type: Add
+      message: >-
+        Treasure magnet storage rules via NFTreasure tagging; flatpack, vending,
+        techfab, and cargo ways to get the boxes.
+  id: 2172
+  time: '2026-05-09T21:55:38.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/45
