@@ -83,6 +83,7 @@
       - !type:PlaySoundBehavior
         sound:
           collection: GlassBreak
+  - type: HLPersistOnShipSave # Triad
   # Mono
   - type: ShipRepairable
     repairTime: 1
