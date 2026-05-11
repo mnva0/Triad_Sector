@@ -363,3 +363,10 @@ Entries:
   id: 2175
   time: '2026-05-11T00:14:25.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/56
+- author: Minerva
+  changes:
+    - type: Tweak
+      message: Labelers may now be stored in Botanical and Medical stashes.
+  id: 2176
+  time: '2026-05-11T03:06:38.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/50
