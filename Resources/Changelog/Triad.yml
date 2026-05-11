@@ -404,3 +404,10 @@ Entries:
   id: 2178
   time: '2026-05-11T10:03:19.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/49
+- author: dainyu940
+  changes:
+    - type: Tweak
+      message: Sprite overhaul for credits
+  id: 2179
+  time: '2026-05-11T12:27:12.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/40
