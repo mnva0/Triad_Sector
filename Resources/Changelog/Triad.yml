@@ -453,3 +453,21 @@ Entries:
   id: 2182
   time: '2026-05-12T11:18:25.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/47
+- author: rebaserHEAD
+  changes:
+    - type: Add
+      message: >-
+        The RCD can place additional hull plating shapes (half, wedge, half-tilt
+        families) using rotation instead of many duplicate menu entries.
+    - type: Add
+      message: >-
+        The RCD can build normal shuttle windows and diagonal shuttle or
+        solid/reinforced walls where recipes were added, with radial icons under
+        fork paths.
+    - type: Fix
+      message: >-
+        RCD no longer allows stacking the same rotatable fixture (e.g. lights)
+        on one tile without differing direction when the recipe disallows it.
+  id: 2183
+  time: '2026-05-12T11:32:29.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/62
