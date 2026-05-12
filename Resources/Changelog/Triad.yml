@@ -471,3 +471,12 @@ Entries:
   id: 2183
   time: '2026-05-12T11:32:29.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/62
+- author: Minerva
+  changes:
+    - type: Add
+      message: >-
+        Collars have been ported from Floof. As of writing, they are
+        inaccessible pending some other changes.
+  id: 2184
+  time: '2026-05-12T11:51:52.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/61
