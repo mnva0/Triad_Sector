@@ -480,3 +480,10 @@ Entries:
   id: 2184
   time: '2026-05-12T11:51:52.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/61
+- author: Wuffindy
+  changes:
+    - type: Fix
+      message: Fixed two-handed activated sound bug
+  id: 2185
+  time: '2026-05-12T14:26:09.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/63
