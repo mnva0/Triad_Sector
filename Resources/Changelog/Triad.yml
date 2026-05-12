@@ -411,3 +411,10 @@ Entries:
   id: 2179
   time: '2026-05-11T12:27:12.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/40
+- author: Wuffindy
+  changes:
+    - type: Tweak
+      message: Reverts mining drills to small size, along adding sounds on handling
+  id: 2180
+  time: '2026-05-12T04:36:47.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/64
