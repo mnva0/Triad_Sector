@@ -418,3 +418,10 @@ Entries:
   id: 2180
   time: '2026-05-12T04:36:47.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/64
+- author: VividPups
+  changes:
+    - type: Add
+      message: Added 93 of Dens Hair markings
+  id: 2181
+  time: '2026-05-12T05:33:09.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/59
