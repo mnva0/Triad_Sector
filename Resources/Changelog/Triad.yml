@@ -494,3 +494,10 @@ Entries:
   id: 2186
   time: '2026-05-13T12:50:36.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/65
+- author: Minerva
+  changes:
+    - type: Tweak
+      message: Canisters now save with ships without needing to anchor them.
+  id: 2187
+  time: '2026-05-13T12:50:39.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/66
