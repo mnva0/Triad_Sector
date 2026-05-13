@@ -487,3 +487,10 @@ Entries:
   id: 2185
   time: '2026-05-12T14:26:09.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/63
+- author: Minerva
+  changes:
+    - type: Fix
+      message: The guidebook now properly links to Triad rules.
+  id: 2186
+  time: '2026-05-13T12:50:36.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/65
