@@ -221,6 +221,9 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             if (ent == gridUid)
                 continue;
 
+            if (!_transformQuery.TryComp(ent, out var entXForm) || entXForm.GridUid != gridUid)
+                continue;
+
             var limitId = limit.LimitId;
             entityAmount.TryGetValue(limitId, out var count);
             entityAmount[limitId] = count + 1;
