@@ -73,7 +73,6 @@ public sealed partial class IdCardConsoleComponent : Component
         //"Quartermaster",
         //"Research",
         "Lawyer",
-        "Mail", // Frontier
         "Maintenance",
         "Medical",
         "Mercenary", // Frontier
