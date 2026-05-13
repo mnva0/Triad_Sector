@@ -516,3 +516,13 @@ Entries:
   id: 2188
   time: '2026-05-13T18:44:24.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/67
+- author: TheRealMasterChief117
+  changes:
+    - type: Add
+      message: >-
+        Added the Feroxi species, a shark-like species of humanoids! They can
+        breathe water vapor. Check out the species guidebook for their other
+        features!
+  id: 2189
+  time: '2026-05-13T22:01:17.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/70
