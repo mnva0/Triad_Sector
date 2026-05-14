@@ -540,3 +540,10 @@ Entries:
   id: 2191
   time: '2026-05-14T17:07:16.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/71
+- author: TheRealMasterChief117
+  changes:
+    - type: Fix
+      message: Fixed resomi and vox having error on certain modsuits.
+  id: 2192
+  time: '2026-05-14T19:32:44.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/74
