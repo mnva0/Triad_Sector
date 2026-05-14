@@ -95,7 +95,7 @@
         layer:
         - MidImpassable
         - LowImpassable
-  - type: HLPersistOnShipSave
+  - type: HLPersistOnShipSave # Triad
 
 - type: entity
   parent: [ BaseStructureIndestructible, BaseStructureDisableToolUse, BaseMachinePowered ]
