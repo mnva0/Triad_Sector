@@ -95,6 +95,7 @@
         layer:
         - MidImpassable
         - LowImpassable
+  - type: HLPersistOnShipSave
 
 - type: entity
   parent: [ BaseStructureIndestructible, BaseStructureDisableToolUse, BaseMachinePowered ]
