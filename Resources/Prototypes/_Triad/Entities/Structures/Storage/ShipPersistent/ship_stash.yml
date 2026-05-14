@@ -17,6 +17,7 @@
       - Store
       - Cash
       - Headset
+      - SavingContraband
   - type: RadarBlip
     radarColor: "#e3ffea"
     scale: 1.5
@@ -78,7 +79,6 @@
         components:
           - Pill
           - Hypospray
-          - MedicalBag
           - HandLabeler
         tags:
           - FitsInMedicalStash
