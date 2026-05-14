@@ -547,3 +547,18 @@ Entries:
   id: 2192
   time: '2026-05-14T19:32:44.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/74
+- author: TheRealMasterChief117
+  changes:
+    - type: Tweak
+      message: Medkits can only fit medical items and things like beakers now
+    - type: Fix
+      message: >-
+        Fixed stashes being able to physically fit items marked as save
+        contraband
+    - type: Tweak
+      message: >-
+        Changed the size of the advanced tactical backpack to be bigger. Now a
+        5x5, from a 4x4
+  id: 2193
+  time: '2026-05-14T20:53:49.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/73
