@@ -533,3 +533,10 @@ Entries:
   id: 2190
   time: '2026-05-14T17:07:10.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/72
+- author: DDrakov
+  changes:
+    - type: Add
+      message: Add radar blip when off grid stash
+  id: 2191
+  time: '2026-05-14T17:07:16.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/71
