@@ -628,3 +628,12 @@ Entries:
   id: 2199
   time: '2026-05-15T22:09:39.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/84
+- author: DDrakov
+  changes:
+    - type: Fix
+      message: 'Fix puddle making your ship unsavable '
+    - type: Tweak
+      message: Remove remote signaler on save
+  id: 2200
+  time: '2026-05-15T22:45:17.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/82
