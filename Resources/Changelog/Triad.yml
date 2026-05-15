@@ -603,3 +603,10 @@ Entries:
   id: 2196
   time: '2026-05-15T16:06:13.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/79
+- author: DDrakov
+  changes:
+    - type: Tweak
+      message: Remove shield ability to activate on item toggle
+  id: 2197
+  time: '2026-05-15T18:50:26.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/75
