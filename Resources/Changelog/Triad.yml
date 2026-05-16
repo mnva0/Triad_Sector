@@ -637,3 +637,10 @@ Entries:
   id: 2200
   time: '2026-05-15T22:45:17.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/82
+- author: Wuffindy
+  changes:
+    - type: Fix
+      message: 'Fixed medsec hud recipe '
+  id: 2201
+  time: '2026-05-16T22:19:22.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/93
