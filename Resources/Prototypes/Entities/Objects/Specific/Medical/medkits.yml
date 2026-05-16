@@ -19,7 +19,6 @@
         - HandLabeler
         - GasTank
         - BreathMask
-        - SurgeryTool
         tags:
         - FitsInMedicalStash
         - PillCanister
