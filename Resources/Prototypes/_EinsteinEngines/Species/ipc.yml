@@ -32,8 +32,6 @@
     HeadSide: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
     Hair: MobHumanoidMarkingMatchSkin
-    UndergarmentTop: MobHumanoidAnyMarking # Triad - Underwear.
-    UndergarmentBottom: MobHumanoidAnyMarking # Triad - Underwear.
     Chest: MobIPCTorso
     LArm: MobIPCLArm
     RArm: MobIPCRArm
@@ -52,14 +50,6 @@
       points: 1
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
-    # Triad changes - Underwear.
-    UndergarmentTop:
-      points: 1
-      required: false
-    UndergarmentBottom:
-      points: 1
-      required: false
-    # End Triad.
     Chest:
       points: 1
       required: true
