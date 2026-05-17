@@ -644,3 +644,22 @@ Entries:
   id: 2201
   time: '2026-05-16T22:19:22.0000000+00:00'
   url: https://github.com/Triad-Sector/Triad_Sector/pull/93
+- author: mnva0
+  changes:
+    - type: Add
+      message: >-
+        Top and bottom undergarments can now be found in the Markings tab of the
+        character creator.
+    - type: Add
+      message: >-
+        The Accessibility tab of Options now has a Censor Nudity Toggle, which
+        adds undergarments to all characters on your client. Undergarments
+        selected in the character creator take priority.
+    - type: Remove
+      message: >-
+        The following species were not given undergarments due to sprite body
+        shape reasons: Resomi, Hydrakin. Reptilian legs don't quite fit into
+        bottom undergarments, but they have kept access to those markings.
+  id: 2202
+  time: '2026-05-17T02:46:13.0000000+00:00'
+  url: https://github.com/Triad-Sector/Triad_Sector/pull/90
