@@ -1,0 +1,17 @@
+- type: construction
+  id: SemioticBlank
+  name: blank semiotic
+  description: Semiotic Standard denoting the nearby presence of an unpainted semiotic.
+  graph: SemioticBlank
+  startNode: start
+  targetNode: semioticBlank
+  category: construction-category-furniture
+  icon:
+    sprite: _Triad/Structures/Wallmounts/semiotics.rsi
+    state: blank
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition

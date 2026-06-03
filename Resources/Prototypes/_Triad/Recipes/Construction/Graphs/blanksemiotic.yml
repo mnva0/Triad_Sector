@@ -1,0 +1,26 @@
+- type: constructionGraph
+  id: SemioticBlank
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: semioticBlank
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+    - node: semioticBlank
+      entity: SemioticBlank
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+          steps:
+            - tool: Screwing
+              doAfter: 1

@@ -1,0 +1,9 @@
+- type: entity
+  parent: CMSemioticBase
+  id: SemioticBlank
+  name: blank semiotic
+  description: Semiotic Standard denoting the nearby presence of an unpainted semiotic.
+  components:
+  - type: Sprite
+    sprite: _Triad/Structures/Wallmounts/semiotics.rsi
+    state: blank

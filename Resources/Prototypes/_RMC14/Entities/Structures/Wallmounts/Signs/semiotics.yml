@@ -5,6 +5,13 @@
   components:
   - type: Sprite
     sprite: _RMC14/Structures/Wallmounts/semiotics.rsi
+  # Triad - Buildable and paintable semiotics.
+  - type: Paintable
+    group: Semiotics
+  - type: Construction
+    graph: SemioticBlank
+    node: semioticBlank
+  # End Triad
 
 - type: entity
   parent: CMSemioticBase
