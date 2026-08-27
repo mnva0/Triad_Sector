@@ -319,6 +319,11 @@
     - !type:HasTraitCondition
       trait: ArmAmputeeRight
   effects:
+  # Triad - SpiderCraft for bionic spinarette.
+  - !type:AddTagsEffect
+    tags:
+    - SpiderCraft
+  # End Triad
   - !type:AddCompsEffect
     components:
     - type: Sericulture
