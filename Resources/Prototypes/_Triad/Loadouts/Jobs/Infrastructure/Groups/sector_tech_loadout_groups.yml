@@ -1,20 +1,19 @@
-# New IDs should be SectorTechnician, not PlantTechnician.
 - type: loadoutGroup
-  id: PlantTechnicianHead
-  name: loadout-group-plant-technician-head
+  id: SectorTechnicianHead
+  name: loadout-group-contractor-head
   minLimit: 0
   loadouts:
-  - StationEngineerHardhatYellow
-  - StationEngineerHardhatOrange
-  - StationEngineerHardhatRed
-  - PlantHardhatBlue
-  - PlantEngineeringBeret
+  - ClothingHeadHatBeretEngineering
+  - ClothingHeadHatHardhatBlue
+  - ClothingHeadHatHardhatOrange
+  - ClothingHeadHatHardhatRed
+  - ClothingHeadHatHardhatWhite
+  - ClothingHeadHatHardhatYellow
+  - ClothingHeadHatHardhatYellowDark
 
 - type: loadoutGroup
   id: PlantBelt
-  name: loadout-group-plant-belt
-  minLimit: 1
-  maxLimit: 1
+  name: loadout-group-contractor-belt
   loadouts:
   - ContractorClothingBeltUtility
   - ContractorClothingBeltUtilityFilled
@@ -25,17 +24,8 @@
   - ContractorClothingBeltUtilityFilled
 
 - type: loadoutGroup
-  id: PlantTechnicianNeck
-  name: loadout-group-plant-technician-neck
-  minLimit: 0
-  loadouts:
-  - PlantScarfStripedOrange
-
-- type: loadoutGroup
-  id: PlantTechnicianJumpsuit
-  name: loadout-group-plant-technician-jumpsuit
-  minLimit: 1
-  maxLimit: 1
+  id: SectorTechnicianJumpsuit
+  name: loadout-group-contractor-jumpsuit
   loadouts:
   - StationEngineerJumpsuit
   - StationEngineerJumpskirt
@@ -47,10 +37,8 @@
   - StationEngineerJumpsuit
 
 - type: loadoutGroup
-  id: PlantTechnicianBackpack
-  name: loadout-group-plant-technician-backpack
-  minLimit: 1
-  maxLimit: 1
+  id: SectorTechnicianBackpack
+  name: loadout-group-contractor-backpack
   loadouts:
   - StationEngineerBackpack
   - StationEngineerSatchel

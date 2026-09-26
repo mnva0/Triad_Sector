@@ -1,9 +1,6 @@
-# New IDs should be DoI, not PlantManager.
 - type: loadoutGroup
-  id: PlantManagerJumpsuit
-  name: loadout-group-plant-manager-jumpsuit
-  minLimit: 1
-  maxLimit: 1
+  id: DoIJumpsuit
+  name: loadout-group-contractor-jumpsuit
   loadouts:
   - ChiefEngineerJumpsuit
   - ChiefEngineerJumpskirt
@@ -23,14 +20,11 @@
   - DoIMantle
 
 - type: loadoutGroup
-  id: PlantManagerBackpack
-  name: loadout-group-plant-manager-backpack
-  minLimit: 1
-  maxLimit: 1
+  id: DoIBackpack
+  name: loadout-group-contractor-backpack
   loadouts:
-  - StationEngineerBackpack
-  - StationEngineerSatchel
-  - StationEngineerDuffel
   - PlantManagerMessengerBag
   fallbacks:
   - StationEngineerBackpack
+  subgroups:
+  - ContractorBackpack
