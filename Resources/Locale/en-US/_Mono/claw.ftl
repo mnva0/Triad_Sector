@@ -13,8 +13,8 @@ clawed-shoot-fail = You can't fit your claws in the trigger guard!
 declaw-success = Your claws are ripped out!
 declaw-item-drop = You feel sharp pain in your fingertips!
 
-has-no-claws-popup = {POSS-ADJ($entity)} has no claws.
-claws-too-short-popup = {POSS-ADJ($entity)} claws are too short.
+has-no-claws-popup = {CAPITALIZE(SUBJECT($entity))} has no claws.
+claws-too-short-popup = {CAPITALIZE(POSS-ADJ($entity))} claws are too short.
 claws-clipping-doafter = You start clipping {POSS-ADJ($entity)} claws.
 
 claws-clipping-success = Your claws have been clipped.
