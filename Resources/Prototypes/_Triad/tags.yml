@@ -57,6 +57,10 @@
 - type: Tag
   id: HZDModsuitCore
 
+# Thruster Burning
+- type: Tag
+  id: ThrusterBurnImmune
+
 # Docking. Shuttle-side tags: a berth that sets PriorityDock.requiredShuttleTag to one of these only
 # forms docking configs against shuttle ports carrying that tag, which is how a tight berth states
 # "the bus docks here with this side" instead of trusting collision checks to pick for it.

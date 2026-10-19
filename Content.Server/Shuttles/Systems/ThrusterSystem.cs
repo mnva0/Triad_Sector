@@ -23,12 +23,13 @@ using Content.Server.Construction; // Frontier
 using Content.Server._Triad.Shuttles.Systems;
 using Content.Shared.DeviceLinking.Events; // Frontier
 using Robust.Shared.Physics; // Triad
-using Content.Shared.Whitelist; // Triad
+using Content.Shared.Tag; // Triad
 using Content.Shared.Mobs.Components; // Triad
 using Robust.Shared.Audio.Systems; // Triad
 using Content.Shared.Popups; // Triad
 using Content.Shared.IdentityManagement; // Triad
 using Robust.Shared.Player; // Triad
+using Robust.Shared.Prototypes; // Triad
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -39,7 +40,7 @@ public sealed partial class ThrusterSystem : EntitySystem
     [Dependency] private SharedMapSystem _mapSystem = default!;
     [Dependency] private SharedAudioSystem _audio = default!; // Triad - thruster changes
     [Dependency] private SharedPopupSystem _popup = default!; // Triad - thruster changes
-    [Dependency] private EntityWhitelistSystem _whitelist = default!; // Triad - thruster changes
+    [Dependency] private TagSystem _tag = default!; // Triad - thruster changes
     [Dependency] private EntityLookupSystem _lookup = default!; // Triad - thruster changes
     [Dependency] private AmbientSoundSystem _ambient = default!;
     [Dependency] private FixtureSystem _fixtureSystem = default!;
@@ -65,6 +66,8 @@ public sealed partial class ThrusterSystem : EntitySystem
     private const float MaximumMobThrusterBurnRange = 2.0f;
 
     public const string BurnFixture = "thruster-burn";
+
+    private static readonly ProtoId<TagPrototype> ThrusterBurnImmuneTag = "ThrusterBurnImmune";
     // Triad End
 
     public override void Initialize()
@@ -595,8 +598,10 @@ public sealed partial class ThrusterSystem : EntitySystem
                 if (ent == thruster)
                     continue;
 
-                if (!_whitelist.CheckBoth(ent, comp.BurnBlacklist, comp.BurnWhitelist))
+                // Triad
+                if (_tag.HasTag(ent, ThrusterBurnImmuneTag))
                     continue;
+                // End Triad
 
                 // Needs to be on the same grid or in space
                 if (collider.GridUid != xform.GridUid && collider.GridUid != null)
@@ -632,9 +637,6 @@ public sealed partial class ThrusterSystem : EntitySystem
     private void TryDamage(Entity<ThrusterComponent> ent, Entity<TransformComponent> collider)
     {
         if (ent.Comp.Damage == null)
-            return;
-
-        if (!_whitelist.CheckBoth(collider, ent.Comp.BurnBlacklist, ent.Comp.BurnWhitelist))
             return;
 
         var thrusterXform = Transform(ent.Owner);

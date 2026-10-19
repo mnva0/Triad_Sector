@@ -53,6 +53,11 @@
   - type: GuideHelp
     guides:
     - SolarPanels
+  # Triad
+  - type: Tag
+    tags:
+    - ThrusterBurnImmune
+  # End Triad
   # Mono
   - type: ShipRepairable
     repairTo: SolarPanel
